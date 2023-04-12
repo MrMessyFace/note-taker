@@ -13,6 +13,10 @@ I used Node.js, Express, and UUID.
 
 When a user opens the webpage, they can start adding notes to the site and can delete any notes at any time.
 
+![Screenshot](./public/assets/images/notes-app-jg2023.herokuapp.com_.png)
+
+![Screenshot](./public/assets/images/notes-app-jg2023.herokuapp.com_notes.png)
+
 ## License
   
 This application is licensed under MIT. To view terms and conditions, then please [visit this link](https://choosealicense.com/).
