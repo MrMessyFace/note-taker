@@ -31,13 +31,7 @@ const getNotes = () =>
     headers: {
       'Content-Type': 'application/json',
     },
-  }).then((response) => response.json())
-    .then((data) => {
-      return data;
-    })
-    .catch((error) => {
-      console.error('Error:', error);
-    });
+  });
 
 const saveNote = (note) =>
   fetch('/api/notes', {
@@ -70,12 +64,9 @@ const renderActiveNote = () => {
     noteTitle.value = '';
     noteText.value = '';
   }
-
-  // console.log("Active Note:", activeNote);
 };
 
 const handleNoteSave = () => {
-  e.preventDefault();
   const newNote = {
     title: noteTitle.value,
     text: noteText.value,
@@ -137,7 +128,6 @@ const renderNoteList = async (notes) => {
   // Returns HTML element with or without a delete button
   const createLi = (text, delBtn = true) => {
     const liEl = document.createElement('li');
-    liEl.setAttribute('data-note', JSON.stringify(notes));
     liEl.classList.add('list-group-item');
 
     const spanEl = document.createElement('span');
